@@ -1,8 +1,8 @@
-# CoalGuard Presentation Charts
+# CoalGuard Research and Evaluation Assets
 
-These charts are designed for the course-project presentation. The labels below distinguish measured source data, CoalGuard replay results, and synthetic calibration examples.
+This folder contains reproducible figures and source-value tables used to explain CoalGuard's processing path and evaluate its research examples. Labels distinguish measured source data, CoalGuard replay calculations, and synthetic calibration examples.
 
-| File | What it shows | Best use |
+| File | What it shows | Use |
 |---|---|---|
 | `mine-alpha-fire-signals.png` / `.svg` | Measured temperature and CO from one published Mine Alpha goaf fire episode; dashed line marks the source's recorded confirmation timestamp. It does not show CoalGuard's risk output. | Show how signals changed in a real recorded mine episode. |
 | `field-replay-comparison.png` / `.svg` | CoalGuard's documented replay summary for 3 confirmed fires and 15 event-free episodes, using the same 24-hour persistence policy. | Compare episode counts and median warning lead in this small dataset. |

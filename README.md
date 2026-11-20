@@ -121,6 +121,10 @@ CoalGuard's 232-hour CO result is a separate recomputation using the documented 
 - **Laboratory coal-oxidation data:** Guo et al. (2019), *Data on analysis of temperature inversion during spontaneous combustion of coal*, *Data in Brief*, 25, 104304. [Article and data](https://doi.org/10.1016/j.dib.2019.104304). These selected laboratory values are examples, not site alarm limits.
 - **Incident context:** US Mine Safety and Health Administration investigation records for the [Aracoma Alma Mine belt fire](https://arlweb.msha.gov/fatals/2006/aracoma/FTL06c1415total.pdf) and [Fairfax Mine slope belt fire](https://arlweb.msha.gov/fatals/2002/fairfax/nftl02fairfax.htm) inform the illustrative mechanical-friction and suppression-loss scenarios. Incident narratives are not training datasets.
 
+### Related work for context (not integrated into CoalGuard)
+
+Coal-fire monitoring research also includes Mamdani fuzzy assessment, multi-point gas monitoring with sequence models, and multi-source feature fusion. These publications provide research context; their datasets and reported performance are not part of CoalGuard's replay or validation. Examples include [fuzzy logic for underground mine-fire assessment](https://pmc.ncbi.nlm.nih.gov/articles/PMC7502667/), [multi-point gas indicators with a GRU warning model](https://www.sciencedirect.com/science/article/pii/S0016236125021775), [multi-source mine-risk feature fusion](https://www.mdpi.com/2071-1050/17/5/2085), and a [BO-CNN-GRU coal self-heating study](https://www.sciencedirect.com/science/article/pii/S0957582026001527). Sensor placement and interference context is discussed in the [NIOSH atmospheric-monitoring overview](https://archive.cdc.gov/www_cdc_gov/niosh/mining/topics/atmosphericmonitoring.html).
+
 Read [Evidence Notes](./docs/EVIDENCE_NOTES.md) for source-by-source use and caveats, and [Published Replay Notes](./docs/REAL_DATA_REPLAY.md) for dataset fields, scoring policy, calculations, and detailed results.
 
 ## 7. Limitations & Next Research Steps
@@ -148,7 +152,5 @@ For the full engineering roadmap and deployment constraints, see [Limitations & 
 - [Student Guide (`docs/STUDENT_GUIDE.md`)](./docs/STUDENT_GUIDE.md): In-depth academic guide explaining coal oxidation chemistry, fuzzy logic theory, Mamdani pipeline mathematics, PSO objective functions, and test cases.
 - [Evidence Notes (`docs/EVIDENCE_NOTES.md`)](./docs/EVIDENCE_NOTES.md): Citations, DOIs, licensing, and explicit utilization records for all published datasets.
 - [Published Replay Notes (`docs/REAL_DATA_REPLAY.md`)](./docs/REAL_DATA_REPLAY.md): Field dataset, model inputs, alert policy, observed results, and limits.
-- [Demonstration Sequence (`docs/DEMO_SEQUENCE.md`)](./docs/DEMO_SEQUENCE.md): Step-by-step presentation script for classroom evaluation.
+- [Reproducible Demo Walkthrough (`docs/DEMO_SEQUENCE.md`)](./docs/DEMO_SEQUENCE.md): A short route-by-route guide to demonstrating the application and interpreting its outputs.
 - [Limitations & Roadmap (`docs/LIMITATIONS.md`)](./docs/LIMITATIONS.md): Transparent engineering constraints and future industrial deployment requirements.
-- [Complete Project Information (`PROJECT_ALL_INFORMATION.md`)](./PROJECT_ALL_INFORMATION.md): Methods, data provenance, research context, observed replay results, limitations, and future directions.
-- [Presentation Slide Text (`PPT_SLIDE_CONTENT.md`)](./PPT_SLIDE_CONTENT.md): Concise, source-aware content for an academic presentation.
