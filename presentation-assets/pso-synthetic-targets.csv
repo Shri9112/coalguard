@@ -1,0 +1,7 @@
+synthetic_training_example,target_risk_index,data_class
+Mine: stable baseline,8,synthetic calibration target
+Stockpile: early heating,48,synthetic calibration target
+Conveyor: severe heating,88,synthetic calibration target
+Conveyor: roller friction,52,synthetic calibration target
+CHP: dust / steam,22,synthetic calibration target
+Ship hold: deep smolder,82,synthetic calibration target

@@ -1,0 +1,562 @@
+.evidenceWorkspace {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.provenanceNote {
+  margin: -4px 0;
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.curvesCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.curvesHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.curveTabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.curveTab {
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.curveTabActive {
+  background: var(--accent-cyan-bg);
+  color: var(--accent-cyan);
+  border-color: rgba(34, 211, 238, 0.4);
+  font-weight: 600;
+}
+
+.curveContentGrid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+}
+
+.curveSvg {
+  width: 100%;
+  height: 220px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.chartLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+}
+
+.chartLegend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chartLegend i {
+  display: inline-block;
+  width: 18px;
+  border-top: 2px solid;
+}
+
+.coLegend {
+  border-color: #22d3ee;
+}
+
+.riskLegend {
+  border-color: #fb7185;
+  border-top-style: dashed;
+}
+
+.pointsTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.pointsTable th {
+  padding: 8px 10px;
+  background: var(--bg-surface);
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.pointsTable td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  vertical-align: middle;
+}
+
+.selectedObservationRow {
+  background: rgba(34, 211, 238, 0.08);
+}
+
+.observationSelect {
+  border: 0;
+  padding: 0;
+  color: var(--accent-cyan);
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.observationSelect:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.riskResult {
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 5px;
+  padding: 3px 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(148, 163, 184, 0.12);
+  color: #cbd5e1;
+}
+
+.riskNormal {
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.12);
+}
+
+.riskWatch {
+  color: #7dd3fc;
+  background: rgba(56, 189, 248, 0.12);
+}
+
+.riskWarning {
+  color: #fcd34d;
+  background: rgba(245, 158, 11, 0.13);
+}
+
+.riskCritical {
+  color: #fda4af;
+  background: rgba(244, 63, 94, 0.14);
+}
+
+.ruleCodes {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.replayPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+}
+
+.replayHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.replayHeading > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.replayHeading strong {
+  color: var(--text-main);
+  font-size: 0.92rem;
+}
+
+.replayHeading span,
+.replayPanel p {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.replayOutput {
+  border-radius: 6px;
+  padding: 6px 9px;
+  color: #fda4af !important;
+  background: rgba(244, 63, 94, 0.12);
+  font-weight: 700;
+}
+
+.replayFacts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.replayFacts span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.replayFacts b {
+  color: var(--text-dim);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.replayPanel p {
+  margin: 0;
+}
+
+.replayPanel .replayCaveat {
+  padding-top: 10px;
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-dim);
+}
+
+.tableScroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+}
+
+.fieldReplayCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.fieldReplayHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.fieldReplayHeader h3 {
+  margin: 8px 0 5px;
+  color: var(--text-main);
+  font-size: 1.1rem;
+}
+
+.fieldReplayHeader p {
+  max-width: 680px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.fieldBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid rgba(56, 189, 248, 0.32);
+  border-radius: 5px;
+  color: #7dd3fc;
+  background: rgba(56, 189, 248, 0.1);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.fieldModelBoundary {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 11px 13px;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-left: 3px solid #fbbf24;
+  border-radius: 6px;
+  background: rgba(251, 191, 36, 0.06);
+}
+
+.fieldModelBoundary strong {
+  color: #fde68a;
+  font-size: 0.82rem;
+}
+
+.fieldModelBoundary span {
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.fieldChartLegend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+}
+
+.fieldChartLegend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fieldChartLegend i {
+  width: 18px;
+  border-top: 3px solid;
+}
+
+.fieldChartLegend small {
+  color: var(--text-dim);
+  font-size: 0.7rem;
+}
+
+.fieldChart {
+  display: block;
+  width: 100%;
+  height: 240px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+}
+
+.fieldGridLine {
+  stroke: rgba(148, 163, 184, 0.16);
+  stroke-width: 1;
+}
+
+.fieldSelectedLine {
+  stroke: rgba(248, 250, 252, 0.62);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+}
+
+.fieldAxisText {
+  fill: #94a3b8;
+  font-size: 10px;
+  font-family: var(--font-mono);
+}
+
+.fieldDayControl {
+  display: grid;
+  grid-template-columns: minmax(150px, 210px) 1fr;
+  align-items: center;
+  gap: 14px;
+}
+
+.fieldDayControl label {
+  color: var(--text-main);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.fieldDayControl input {
+  width: 100%;
+  accent-color: #22d3ee;
+}
+
+.fieldValues {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.fieldValues > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 7px;
+  background: var(--bg-surface);
+}
+
+.fieldValues span {
+  color: var(--text-dim);
+  font-size: 0.7rem;
+}
+
+.fieldValues strong {
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-size: 1.02rem;
+}
+
+.fieldValues small {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.fieldCaveat {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.74rem;
+  line-height: 1.5;
+}
+
+/* Incident & Field Records Grid */
+.recordsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.recordCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recordTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recordType {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.typeLab {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+
+.typeOfficial {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+}
+
+.typeField {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+.typeRemote {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+}
+
+.recordTitle {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.35;
+}
+
+.recordRow {
+  display: flex;
+  font-size: 0.8rem;
+  gap: 8px;
+}
+
+.recordRow strong {
+  min-width: 90px;
+  color: var(--text-dim);
+}
+
+.recordRow span {
+  color: var(--text-muted);
+}
+
+.recordLink {
+  margin-top: auto;
+  font-size: 0.8rem;
+  color: var(--accent-cyan);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.recordLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .curveContentGrid {
+    grid-template-columns: 1fr;
+  }
+  .recordsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .curvesCard,
+  .fieldReplayCard {
+    padding: 15px;
+  }
+
+  .curveTabs {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .fieldChart {
+    height: 200px;
+  }
+
+  .fieldDayControl,
+  .fieldValues {
+    grid-template-columns: 1fr;
+  }
+
+  .replayFacts {
+    grid-template-columns: 1fr;
+  }
+
+  .pointsTable {
+    min-width: 520px;
+  }
+}

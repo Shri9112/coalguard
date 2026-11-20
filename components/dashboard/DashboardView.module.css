@@ -1,0 +1,340 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  align-items: center;
+  gap: 28px;
+  padding: 28px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #10213a, #0c1729 72%);
+}
+
+.heroCopy {
+  max-width: 720px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--accent-cyan);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero h2 {
+  margin: 0;
+  color: var(--text-main);
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  line-height: 1.15;
+}
+
+.heroCopy > p {
+  max-width: 640px;
+  margin: 12px 0 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.primaryButton {
+  color: #06121f;
+  background: var(--accent-cyan);
+}
+
+.primaryButton:hover {
+  background: #67e8f9;
+}
+
+.secondaryButton {
+  color: var(--text-main);
+  background: var(--bg-surface);
+  border-color: var(--border-strong);
+}
+
+.secondaryButton:hover {
+  background: var(--bg-card-hover);
+}
+
+.riskCard {
+  display: grid;
+  justify-items: start;
+  gap: 7px;
+  padding: 18px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: rgba(5, 14, 27, 0.62);
+}
+
+.riskLabel,
+.riskCard > p {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.riskValue {
+  color: var(--text-main);
+  font-size: 2.25rem;
+  font-weight: 750;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.riskValue small {
+  margin-left: 3px;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.riskStage {
+  padding: 3px 9px;
+  border: 1px solid currentColor;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.riskNormal { color: #34d399; background: rgba(16, 185, 129, 0.1); }
+.riskWatch { color: #7dd3fc; background: rgba(56, 189, 248, 0.1); }
+.riskWarning { color: #fbbf24; background: rgba(245, 158, 11, 0.1); }
+.riskCritical { color: #fca5a5; background: rgba(239, 68, 68, 0.12); }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.statCard {
+  display: grid;
+  grid-template-columns: 24px 42px 1fr;
+  align-items: center;
+  gap: 10px;
+  min-height: 68px;
+  padding: 12px 16px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+}
+
+.statCard svg { color: var(--accent-cyan); }
+.statCard strong { font-size: 1.3rem; font-variant-numeric: tabular-nums; }
+.statCard span { color: var(--text-muted); font-size: 0.86rem; }
+
+.projectFacts,
+.profilesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.sectionHeading h3 {
+  color: var(--text-main);
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.factGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.factCard {
+  min-height: 118px;
+  padding: 16px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+}
+
+.factCard > span {
+  color: var(--text-dim);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.factCard p {
+  margin-top: 8px;
+  color: var(--text-main);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.boundaryNote {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--accent-cyan);
+  font-size: 0.86rem;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.textLink:hover { text-decoration: underline; }
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+  gap: 10px;
+}
+
+.profileCard {
+  display: flex;
+  min-height: 132px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 14px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-main);
+  background: var(--bg-card);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.profileCard:hover,
+.profileSelected {
+  border-color: var(--profile-accent);
+  background: color-mix(in srgb, var(--profile-accent) 8%, var(--bg-card));
+}
+
+.profileTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--profile-accent);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.profileDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--profile-accent);
+}
+
+.profileCard strong { font-size: 0.92rem; }
+
+.profileDescription {
+  color: var(--text-muted);
+  font-size: 0.81rem;
+  line-height: 1.4;
+}
+
+.howItWorks {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+}
+
+.howItWorks summary {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 16px;
+  color: var(--text-main);
+  font-size: 0.93rem;
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+
+.howItWorks summary::-webkit-details-marker { display: none; }
+.howItWorks summary svg { color: var(--accent-cyan); }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0 16px 16px;
+}
+
+.steps p {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+}
+
+.steps b { color: var(--accent-cyan); font-size: 0.82rem; }
+.steps span { color: var(--text-muted); font-size: 0.8rem; line-height: 1.45; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .riskCard { grid-template-columns: 1fr auto auto; align-items: center; justify-items: start; }
+  .riskCard > p { grid-column: 1 / -1; }
+  .factGrid { grid-template-columns: 1fr; }
+  .factCard { min-height: 0; }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .dashboard { gap: 18px; }
+  .hero { padding: 20px; gap: 18px; }
+  .actions { align-items: stretch; flex-direction: column; }
+  .stats { grid-template-columns: 1fr; gap: 8px; }
+  .statCard { min-height: 58px; }
+  .riskCard { grid-template-columns: 1fr auto; }
+  .riskValue { grid-row: span 2; grid-column: 2; }
+  .riskStage { grid-column: 1; }
+  .riskCard > p { grid-column: 1 / -1; }
+  .sectionHeading { align-items: flex-start; }
+  .profileGrid { grid-template-columns: 1fr; }
+  .profileCard { min-height: 0; }
+  .steps { grid-template-columns: 1fr; }
+}

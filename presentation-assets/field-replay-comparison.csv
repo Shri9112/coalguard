@@ -1,0 +1,4 @@
+method,fire_episodes_alerted,event_free_alarms,median_lead_hours
+Basic Mamdani,3/3,0/15,100
+PSO-tuned Mamdani,3/3,0/15,108
+Published CO threshold comparator,3/3,0/15,232
